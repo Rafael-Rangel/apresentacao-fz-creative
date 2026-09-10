@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ARA Systems × FZ Creative Solutions: Proposta Comercial</title>
+<meta name="description" content="Proposta comercial da ARA Systems para a FZ Creative Solutions: landing page, site institucional, KoruVision CRM, criação de conteúdo, gestão de redes e Google Ads.">
+<meta name="theme-color" content="#0b0618">
+<link rel="icon" href="imagens/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="imagens/icone.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ARA × FZ">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0618;
+  --ink:#0f0820;
+  --ink-2:#160a28;
+  --gold:#ff7a1a;
+  --gold-soft:#ff9a4a;
+  --gold-dim:rgba(255,122,26,.28);
+  --nude:#ead8f4;
+  --text:#f4eef8;
+  --muted:#b8a8c9;
+  --line:rgba(232,212,240,.14);
+  --serif:'Syne','Segoe UI',system-ui,sans-serif;
+  --sans:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#05030c;overflow:hidden;font-family:var(--sans);color:var(--text);-webkit-font-smoothing:antialiased}
+
+.stage{position:fixed;inset:0;display:flex;align-items:stretch;justify-content:stretch;background:var(--ink)}
+.deck{position:relative;width:100%;height:100%;height:100dvh;transform-origin:center center;flex:none}
+
+.slide{position:absolute;inset:0;display:none;background:var(--ink);overflow:hidden;border-radius:0}
+.slide.on{display:flex;flex-direction:column}
+.pad{position:relative;inset:auto;padding:calc(26px + env(safe-area-inset-top)) 20px 88px;display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.fit{display:flex;flex-direction:column;flex:0 0 auto;min-height:0;transform-origin:top left}
+.pad.decl>.fit{justify-content:flex-start}
+
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:3px 3px}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(255,122,26,.16) 0%,transparent 62%);filter:blur(10px)}
+.glow.tl{top:-380px;left:-260px}
+.glow.br{bottom:-420px;right:-300px;background:radial-gradient(circle,rgba(124,58,237,.28) 0%,transparent 62%)}
+
+.kicker{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.kicker::after{content:'';height:1px;width:28px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+h1{font-family:var(--serif);font-weight:700;font-size:34px;line-height:1.08;letter-spacing:-.03em}
+h2{font-family:var(--serif);font-weight:700;font-size:27px;line-height:1.14;letter-spacing:-.025em;margin-bottom:12px}
+h3{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.2}
+.sub{font-size:15px;line-height:1.55;color:var(--muted);font-weight:300;max-width:none;margin-bottom:22px}
+em.g{font-style:normal;color:var(--gold-soft)}
+strong{font-weight:600;color:#fff}
+
+.rule{height:1px;background:linear-gradient(90deg,var(--gold),var(--gold-dim) 30%,transparent);margin:0 0 30px}
+
+/* ---------- capa ---------- */
+.capa{position:relative;inset:auto;flex:1;min-height:0;display:flex}
+.capa .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.capa .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,6,24,.55) 0%,rgba(11,6,24,.9) 45%,rgba(11,6,24,.98) 100%)}
+.capa .in{position:relative;inset:auto;flex:1;min-height:0;max-width:none;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(26px + env(safe-area-inset-top)) 20px 96px;display:flex;flex-direction:column;justify-content:flex-end}
+.capa h1{font-size:38px;margin:8px 0 18px;font-weight:700;letter-spacing:-.035em}
+.capa .marca{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--nude);font-weight:400}
+.capa .meta{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.capa .meta b{display:block;color:var(--gold-soft);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px}
+
+/* ---------- divisor de secao ---------- */
+.secao{position:relative;inset:auto;flex:1;min-height:0;display:flex}
+.secao .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.secao .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,6,24,.6),rgba(11,6,24,.95) 60%)}
+.secao .in{position:relative;inset:auto;flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(26px + env(safe-area-inset-top)) 20px 88px;display:flex;flex-direction:column;justify-content:center}
+.secao .ico.lg{margin:0}
+.secao-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.secao .num{font-family:var(--serif);font-size:36px;line-height:1;color:transparent;-webkit-text-stroke:1px var(--gold-dim);margin:0}
+.secao h1{font-size:40px;max-width:none;letter-spacing:-.03em}
+.secao .sub{margin-top:14px;font-size:16px;max-width:none;color:var(--nude);opacity:.82}
+
+/* ---------- declaracao ---------- */
+.bgfoto{position:absolute;inset:0;background-size:cover;background-position:center right}
+.bgveil{position:absolute;inset:0;background:linear-gradient(95deg,rgba(15,8,32,.98) 34%,rgba(15,8,32,.82) 62%,rgba(15,8,32,.5) 100%)}
+.decl{justify-content:center}
+.decl.comfoto .frase,.decl.comfoto .nota,.decl.comfoto ul{max-width:730px}
+.decl .frase{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.22;max-width:none;letter-spacing:-.025em}
+.decl .frase p{margin-bottom:14px}
+.decl .frase p:last-child{margin-bottom:0}
+.decl .nota{margin-top:24px;padding-left:16px;border-left:2px solid var(--gold);font-size:15px;line-height:1.55;color:var(--nude);max-width:none;font-weight:300}
+.decl ul{list-style:none;margin:20px 0 0}
+.decl ul li{font-family:var(--sans);font-size:15px;font-weight:300;line-height:1.5;color:var(--muted);padding:9px 0;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid rgba(232,212,240,.07)}
+.decl.comfoto .frase,.decl.comfoto .nota,.decl.comfoto ul{max-width:none}
+.bgveil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,8,32,.72),rgba(15,8,32,.97) 55%)}
+
+/* ---------- mosaico de cards ---------- */
+.mosaico{display:grid;grid-template-columns:1fr;gap:10px;flex:1;align-content:start}
+.mosaico.n4,.mosaico.n5,.mosaico.n6{grid-template-columns:1fr 1fr}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:16px 14px 18px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(124,58,237,.07));min-height:0;transition:transform .25s ease,border-color .25s,box-shadow .25s,background .25s}
+.tile .ico{width:36px;height:36px;border-radius:10px;margin-bottom:2px}
+.tile .ico svg{width:16px;height:16px}
+.tile h4{font-family:var(--serif);font-size:15px;font-weight:600;color:#fff;line-height:1.25}
+.tile p{font-size:12px;line-height:1.4;font-weight:300;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;max-width:none}
+.pill{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border:1px solid var(--line);border-radius:999px;font-size:11.5px;color:var(--nude);background:rgba(255,255,255,.03);letter-spacing:.02em;transition:transform .25s ease,border-color .25s,background .25s,box-shadow .25s}
+.ico{display:inline-flex;align-items:center;justify-content:center;flex:none;width:38px;height:38px;border-radius:11px;color:var(--gold);background:linear-gradient(165deg,rgba(255,122,26,.16),rgba(124,58,237,.08));border:1px solid var(--gold-dim);transition:transform .25s ease,border-color .25s,box-shadow .25s,background .25s}
+.ico svg{width:18px;height:18px;display:block}
+.ico.lg{width:52px;height:52px;border-radius:16px}
+.ico.lg svg{width:26px;height:26px}
+.ico.sm{width:28px;height:28px;border-radius:8px}
+.ico.sm svg{width:14px;height:14px}
+.ico.neg{color:#e0a8a0;background:rgba(180,80,80,.12);border-color:rgba(180,120,120,.28)}
+.ico.ok{color:#9ee0b8;background:rgba(70,170,120,.12);border-color:rgba(90,180,130,.28)}
+
+/* ---------- duas colunas ---------- */
+.duo,.cen,.pacs,.tl,.obj .grade{display:grid;grid-template-columns:1fr;gap:14px;flex:1;align-content:start}
+.painel{border:1px solid var(--line);border-radius:10px;padding:20px 18px;background:linear-gradient(160deg,rgba(255,255,255,.035),rgba(255,255,255,.008));transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.painel.neg{border-color:rgba(180,120,120,.22)}
+.painel.pos{border-color:var(--gold-dim);background:linear-gradient(160deg,rgba(255,122,26,.09),rgba(255,122,26,.015))}
+.painel h4{font-family:var(--serif);font-size:21px;font-weight:400;margin-bottom:13px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.painel.neg h4{color:#d9a9a2}
+.painel.pos h4{color:var(--gold-soft)}
+.painel ul{list-style:none}
+.painel li{font-size:14px;line-height:1.5;font-weight:300;color:var(--nude);padding:6px 0;display:flex;align-items:flex-start;gap:10px}
+.painel li::before{display:none}
+.painel li b{color:#fff;font-weight:600}
+
+/* ---------- cenario antes/depois ---------- */
+.cen{align-content:center}
+.cen .box{border-radius:10px;padding:20px 18px;border:1px solid var(--line);background:rgba(255,255,255,.02);display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.cen .box.hi{border-color:var(--gold-dim);background:linear-gradient(165deg,rgba(255,122,26,.1),rgba(255,122,26,.02))}
+.cen .tag{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.cen .box.hi .tag{color:var(--gold)}
+.cen .fala{font-family:var(--serif);font-size:27px;line-height:1.34;color:var(--nude);margin-bottom:20px}
+.cen .box.hi .fala{color:#fff}
+.cen ul{list-style:none;margin-top:auto}
+.cen li{font-size:16px;line-height:1.5;font-weight:300;color:var(--muted);padding:7px 0 7px 19px;position:relative}
+.cen li::before{content:'';position:absolute;left:0;top:14px;width:8px;height:1px;background:var(--gold-dim)}
+.cen .box.hi li{color:var(--nude)}
+.cen .selo{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--gold-soft);letter-spacing:.04em}
+
+/* ---------- comparativo ---------- */
+.tab,.tab tbody,.tab tr,.tab td,.tab th{display:block;width:100%}
+.tab thead{display:none}
+.tab th{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:0 12px 10px;border-bottom:1px solid var(--line)}
+.tab td{font-size:13px;line-height:1.4;padding:10px 12px;border-bottom:none;color:var(--muted);vertical-align:top}
+.tab td.b{color:#fff;font-weight:400;background:linear-gradient(90deg,rgba(255,122,26,.075),rgba(255,122,26,.02));border-radius:10px;margin-bottom:12px}
+.tab tr{padding:4px 0 10px;border-bottom:1px solid rgba(232,212,240,.07);transition:background .25s}
+.tab td .row{display:flex;align-items:center;gap:10px}
+.tab th .row{display:flex;align-items:center;gap:8px}
+
+/* ---------- ciclo ---------- */
+.ciclo{display:flex;flex-direction:column;gap:2px;flex:1;align-items:stretch}
+.ciclo .et{display:grid;grid-template-columns:42px 1fr;column-gap:14px;align-items:start;text-align:left;padding:9px 0;border-radius:12px;transition:transform .25s ease,background .25s}
+.ciclo .n{width:42px;height:42px;margin:0;border-radius:12px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;color:var(--gold);background:linear-gradient(165deg,rgba(255,122,26,.18),rgba(124,58,237,.1));grid-row:1/span 2;transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.ciclo .n .ico{width:auto;height:auto;background:none;border:none;padding:0;color:var(--gold)}
+.ciclo .n .ico svg{width:24px;height:24px}
+.kicker .ico{width:22px;height:22px;border-radius:6px}
+.kicker .ico svg{width:12px;height:12px}
+.ciclo .t{font-family:var(--serif);font-size:18px;margin-bottom:3px;color:#fff;grid-column:2}
+.ciclo .d{font-size:13.5px;line-height:1.45;color:var(--muted);font-weight:300;grid-column:2}
+.ciclo .seta{display:none}
+
+/* ---------- pacotes ---------- */
+.pacs{grid-auto-flow:row;align-content:stretch}
+.pac{border:1px solid var(--line);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;background:linear-gradient(170deg,rgba(255,255,255,.035),rgba(255,255,255,.006));transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.pac.dest{border-color:var(--gold);background:linear-gradient(170deg,rgba(255,122,26,.13),rgba(255,122,26,.02));box-shadow:0 0 44px rgba(255,122,26,.1)}
+.pac .fx{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);height:16px;margin-bottom:8px}
+.pac .ico{margin-bottom:12px}
+.pac h4{font-family:var(--serif);font-size:25px;font-weight:700;margin-bottom:4px}
+.pac .lin{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;padding-bottom:11px;border-bottom:1px solid var(--line)}
+.pac ul{list-style:none;flex:1}
+.pac li{font-size:14px;line-height:1.4;font-weight:300;color:var(--nude);padding:6px 0 6px 17px;position:relative}
+.pac li::before{content:'+';position:absolute;left:0;top:6px;color:var(--gold);font-size:14px}
+.pac .val{margin-top:14px;padding-top:13px;border-top:1px solid var(--line);display:flex;flex-direction:row;flex-wrap:wrap;gap:18px 32px}
+.pac .fx:empty{display:none}
+.pac .val .l{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.pac .val .v{font-family:var(--serif);font-size:24px;color:var(--gold-soft);line-height:1.2}
+.pac .val .g.ok .l,.pac .val .g.ok .v,.pac .val .g.ok .v span{color:#7dcea0}
+
+/* ---------- timeline ---------- */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;flex:1;align-content:center}
+.tl .f{padding:0 26px 0 0;position:relative}
+.tl .f::before{content:'';position:absolute;left:0;top:32px;right:0;height:1px;background:var(--gold-dim)}
+.tl .f:last-child::before{background:linear-gradient(90deg,var(--gold-dim),transparent)}
+.tl .b{width:14px;height:14px;border-radius:50%;background:var(--ink);border:1px solid var(--gold);position:relative;top:26px;box-shadow:0 0 0 5px var(--ink),0 0 16px rgba(255,122,26,.5)}
+.tl .m{margin-top:52px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+.tl .t{font-family:var(--serif);font-size:29px;margin-bottom:11px;line-height:1.15}
+.tl .d{font-size:15.5px;line-height:1.5;color:var(--muted);font-weight:300;padding-right:14px}
+
+/* ---------- preco ---------- */
+.prec{display:flex;flex-direction:column;flex:1;justify-content:flex-start}
+.prec .linhas{display:flex;flex-direction:column;gap:11px}
+.prec .l{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,rgba(255,255,255,.035),transparent);transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.prec .l .nome{font-family:var(--serif);font-size:20px;margin-bottom:6px}
+.prec .l .desc{font-size:13.5px;line-height:1.5;color:var(--muted);font-weight:300}
+.prec .l .dir{flex:none;text-align:left;min-width:0;display:flex;align-items:baseline;gap:12px}
+.prec .l .v{font-family:var(--serif);font-size:26px;color:var(--gold-soft);line-height:1.1}
+.prec .l .cond{font-size:12.5px;color:var(--muted);margin-top:0;letter-spacing:.04em;font-weight:500}
+.prec .l .cond.ok,.prec .l .cond.ok span{color:#7dcea0}
+.prec .l.ok:not(.hi) .v,.prec .l.ok:not(.hi) .v span{color:#7dcea0}
+.prec .l.inc{padding:12px 16px;gap:8px}
+.prec .l.inc .nome{font-size:16px;margin-bottom:4px}
+.prec .l.inc .desc{font-size:12.5px}
+.prec .l.inc .v{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#7dcea0}
+.prec .obs{margin-top:18px;padding:14px 16px;border-left:2px solid var(--gold);background:rgba(255,122,26,.06);font-size:14px;line-height:1.55;color:var(--nude);font-weight:300}
+.prec .obs ul{list-style:none;margin:0;display:flex;flex-direction:column;gap:7px}
+.prec .obs li{padding-left:16px;position:relative}
+.prec .obs li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(255,122,26,.16)}
+.prec .l.hi{border-color:var(--gold-dim);background:linear-gradient(120deg,rgba(255,122,26,.1),transparent)}
+.prec .l .esq{flex:1}
+.prec .obs b{color:#fff}
+.vazio{color:var(--gold);border-bottom:1px dashed var(--gold-dim);padding-bottom:1px}
+
+/* ---------- contato ---------- */
+.fim{position:relative;inset:auto;flex:1;min-height:0;display:flex}
+.fim .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.fim .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,6,24,.6),rgba(11,6,24,.96) 55%)}
+.fim .in{position:relative;inset:auto;flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(26px + env(safe-area-inset-top)) 20px 88px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left}
+.fim .passos{list-style:none;margin:18px 0 26px;max-width:none;width:100%}
+.fim .passos li{font-size:14.5px;line-height:1.5;font-weight:300;color:var(--nude);padding:9px 0;border-bottom:1px solid rgba(232,212,240,.08);display:flex;gap:14px;justify-content:flex-start;align-items:center;transition:transform .25s ease,background .25s}
+.fim .kicker{justify-content:flex-start!important}
+.fim h2{font-size:30px!important}
+.fim .passos .n{color:var(--gold);font-family:var(--serif);font-size:19px;min-width:22px}
+.fim .card{border:1px solid var(--gold-dim);border-radius:4px;padding:24px 34px;background:rgba(255,122,26,.06);text-align:right}
+.fim .card .m{font-size:14px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:12px}
+.fim .card .c{font-size:16px;color:var(--nude);line-height:1.8;font-weight:300}
+
+/* ---------- rodape / hud ---------- */
+.rod{display:none}
+.barra{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));transition:width .45s ease;z-index:5}
+
+.hud{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:40;opacity:1}
+.hud::before{content:'';position:absolute;left:-60px;right:-60px;top:-26px;bottom:-40px;z-index:-1;pointer-events:none;background:linear-gradient(transparent,rgba(15,8,32,.9) 60%)}
+.hud button{background:rgba(20,16,23,.9);border:1px solid var(--line);color:var(--nude);width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:17px;transition:transform .25s ease,border-color .25s,color .25s,box-shadow .25s;backdrop-filter:blur(8px)}
+.hud .conta{width:auto;padding:0 14px;border-radius:19px;font-size:12px;letter-spacing:.1em;cursor:default}
+
+.zonas{display:none}
+
+/* ---------- indice ---------- */
+.menu{position:fixed;inset:0;background:rgba(8,4,18,.96);z-index:60;display:none;padding:26px 18px calc(26px + env(safe-area-inset-bottom));overflow:auto;backdrop-filter:blur(6px)}
+.menu.on{display:block}
+.menu h3{color:var(--gold);font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-family:var(--sans);font-weight:500;margin-bottom:18px}
+.menu .grade{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.menu .it{border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;transition:transform .25s ease,border-color .25s,background .25s,box-shadow .25s;background:rgba(255,255,255,.02)}
+.menu .it:hover{border-color:var(--gold);background:rgba(255,122,26,.1)}
+.menu .it .n{font-size:10px;color:var(--gold);letter-spacing:.16em;margin-bottom:5px}
+.menu .it .t{font-size:14px;color:var(--nude);font-weight:300;line-height:1.35}
+
+/* ---------- objecoes ---------- */
+.obj{position:fixed;inset:0;background:rgba(8,4,18,.97);z-index:70;display:none;padding:26px 18px calc(26px + env(safe-area-inset-bottom));overflow:auto;backdrop-filter:blur(6px)}
+.obj.on{display:block}
+.obj .cab{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+.obj .cab h3{font-family:var(--serif);font-size:26px;font-weight:600;color:#fff}
+.obj .cab span{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.obj .c{border:1px solid var(--line);border-left:2px solid var(--gold);border-radius:10px;padding:16px 18px;background:rgba(255,255,255,.025);transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.obj .c .q{font-family:var(--serif);font-size:19px;color:var(--gold-soft);margin-bottom:10px}
+.obj .c .a{font-size:14.5px;line-height:1.58;color:var(--nude);font-weight:300}
+.obj .c .a b{color:#fff;font-weight:600}
+
+@keyframes enterY{from{opacity:0;transform:translate3d(0,18px,0);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+
+@media (hover:hover) and (pointer:fine){
+  .pill:hover,.tile:hover,.painel:hover,.cen .box:hover,.pac:hover,.prec .l:hover,.ciclo .et:hover,.menu .it:hover,.obj .c:hover,.fim .passos li:hover,.decl ul li:hover{
+    transform:translateY(-4px);border-color:var(--gold);box-shadow:0 14px 36px rgba(255,122,26,.16);background:linear-gradient(165deg,rgba(255,122,26,.12),rgba(124,58,237,.08))}
+  .ico:hover{transform:scale(1.1) rotate(-6deg);border-color:var(--gold);box-shadow:0 8px 20px rgba(255,122,26,.25)}
+  .ciclo .n:hover{transform:scale(1.08);box-shadow:0 8px 22px rgba(255,122,26,.25)}
+  .hud button:hover{transform:translateY(-3px) scale(1.06);border-color:var(--gold);color:var(--gold-soft);box-shadow:0 8px 20px rgba(255,122,26,.2)}
+  .tab tr:hover td.b{box-shadow:0 8px 22px rgba(255,122,26,.12)}
+  .pac.dest:hover{box-shadow:0 16px 40px rgba(255,122,26,.22)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ---------- desktop ---------- */
+@media (min-width:861px){
+  .stage{align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 0%,#2a1048 0%,#05030c 70%)}
+  .deck{width:1280px;height:720px}
+  .slide{border-radius:2px}
+  .slide.on{display:block}
+  .pad{position:absolute;inset:0;padding:72px 88px;overflow:hidden;flex:none}
+  .fit{flex:1}
+  .pad.decl>.fit{justify-content:center}
+  .glow{width:760px;height:760px}
+
+  h1{font-size:64px}
+  h2{font-size:42px;margin-bottom:14px}
+  h3{font-size:28px}
+  .sub{font-size:19px;max-width:860px;margin-bottom:32px}
+  .kicker{font-size:13px;letter-spacing:.32em;margin-bottom:26px;gap:14px}
+  .kicker::after{width:56px}
+
+  .capa,.secao,.fim{position:absolute;inset:0;flex:none;display:block;min-height:0}
+  .capa .in,.secao .in,.fim .in{position:absolute;inset:0;padding:0 88px;overflow:visible;flex:none;max-width:790px;justify-content:center}
+  .capa .in{justify-content:center}
+  .capa .veil{background:linear-gradient(100deg,rgba(11,6,24,.97) 0%,rgba(11,6,24,.9) 38%,rgba(11,6,24,.35) 72%,rgba(11,6,24,.55) 100%)}
+  .capa h1{font-size:62px;margin:10px 0 22px}
+  .capa .marca{font-size:15px;letter-spacing:.42em}
+  .capa .meta{margin-top:42px;padding-top:26px;gap:34px;font-size:13.5px;flex-wrap:nowrap}
+  .capa .bg{background-position:center right}
+
+  .secao .in{max-width:none}
+  .secao .veil{background:linear-gradient(85deg,rgba(11,6,24,.96) 12%,rgba(11,6,24,.72) 52%,rgba(11,6,24,.5) 100%)}
+  .secao-top{gap:18px;margin-bottom:18px}
+  .secao .num{font-size:56px}
+  .secao h1{font-size:64px;max-width:820px}
+  .secao .sub{margin-top:22px;font-size:21px;max-width:620px}
+
+  .bgveil{background:linear-gradient(95deg,rgba(15,8,32,.98) 34%,rgba(15,8,32,.82) 62%,rgba(15,8,32,.5) 100%)}
+  .decl .frase{font-size:40px;max-width:1000px}
+  .decl .frase p{margin-bottom:22px}
+  .decl .nota{margin-top:44px;padding-left:26px;font-size:19px;max-width:760px}
+  .decl ul{margin-top:30px}
+  .decl ul li{font-size:19px;padding:11px 0}
+  .decl.comfoto .frase,.decl.comfoto .nota,.decl.comfoto ul{max-width:730px}
+
+  .mosaico{gap:14px}
+  .mosaico.n2,.mosaico.n3,.mosaico.n4{grid-template-columns:repeat(2,1fr)}
+  .mosaico.n5,.mosaico.n6{grid-template-columns:repeat(3,1fr)}
+  .tile{padding:20px 18px 22px;border-radius:16px;gap:10px}
+  .tile .ico{width:42px;height:42px;border-radius:12px}
+  .tile .ico svg{width:19px;height:19px}
+  .tile h4{font-size:18px}
+  .tile p{font-size:13.5px;line-height:1.45}
+  .pills{gap:10px;max-width:740px}
+  .pill{font-size:12.5px}
+
+  .duo,.cen{grid-template-columns:1fr 1fr;gap:34px}
+  .pacs{grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:16px;grid-template-columns:none}
+  .obj .grade{grid-template-columns:1fr 1fr;gap:16px}
+  .painel{padding:30px 32px;border-radius:4px}
+  .painel h4{font-size:27px;margin-bottom:18px;padding-bottom:14px}
+  .painel li{font-size:16px;padding:8px 0}
+  .cen .box{padding:32px 34px;border-radius:4px}
+  .cen .fala{font-size:27px}
+
+  .tab{display:table;width:100%;border-collapse:collapse}
+  .tab thead{display:table-header-group}
+  .tab tbody{display:table-row-group}
+  .tab tr{display:table-row;padding:0;border:none}
+  .tab th,.tab td{display:table-cell;width:50%;font-size:16.5px;padding:13px 22px;border-bottom:1px solid rgba(232,212,240,.07);vertical-align:top}
+  .tab th{font-size:11.5px;padding:0 22px 14px}
+  .tab th.b{color:var(--gold)}
+  .tab td.b{border-radius:0;margin:0}
+
+  .ciclo{flex-direction:row;align-items:center;gap:0}
+  .ciclo .et{display:block;flex:1;text-align:center;padding:0 8px;grid-template-columns:none}
+  .ciclo .n{width:56px;height:56px;margin:0 auto 16px;border-radius:16px;grid-row:auto}
+  .ciclo .t,.ciclo .d{grid-column:auto}
+  .ciclo .t{font-size:24px;margin-bottom:9px}
+  .ciclo .d{font-size:14.5px}
+  .ciclo .seta{display:block;flex:none;width:34px;color:var(--gold-dim);font-size:19px;text-align:center;padding-bottom:52px}
+
+  .pac{padding:22px 20px;border-radius:4px}
+  .pac h4{font-size:24px}
+  .pac .lin{margin-bottom:16px;padding-bottom:13px;font-size:11.5px}
+  .pac .val{margin-top:18px;padding-top:16px;flex-direction:column;gap:9px}
+  .pac .val .v{font-size:24px}
+
+  .prec{justify-content:center}
+  .prec .linhas{gap:14px}
+  .prec .l{flex-direction:row;gap:20px;padding:19px 26px;border-radius:4px}
+  .prec .l .nome{font-size:26px}
+  .prec .l .desc{font-size:15px}
+  .prec .l .dir{text-align:right;min-width:210px;display:block}
+  .prec .l .v{font-size:34px}
+  .prec .l .cond{margin-top:6px}
+  .prec .l.inc{padding:14px 22px}
+  .prec .l.inc .nome{font-size:18px}
+  .prec .l.inc .desc{font-size:14px}
+  .prec .l.inc .v{font-size:14px}
+  .prec:has(.inc),
+  .prec:has(.l:nth-child(4)){justify-content:flex-start}
+  .prec:has(.inc) .linhas,
+  .prec:has(.l:nth-child(4)) .linhas{gap:8px}
+  .prec:has(.inc) .l:not(.inc),
+  .prec:has(.l:nth-child(4)) .l{padding:12px 20px}
+  .prec:has(.inc) .l:not(.inc) .nome,
+  .prec:has(.l:nth-child(4)) .l .nome{font-size:20px;margin-bottom:3px}
+  .prec:has(.inc) .l:not(.inc) .v,
+  .prec:has(.l:nth-child(4)) .l .v{font-size:26px}
+  .prec:has(.inc) .obs,
+  .prec:has(.l:nth-child(4)) .obs{margin-top:12px;padding:12px 16px;font-size:14px}
+  .prec .obs{margin-top:26px;padding:18px 24px;font-size:16px}
+
+  .fim .in{max-width:none;align-items:flex-end;text-align:right;justify-content:center}
+  .fim h2{font-size:52px!important}
+  .fim .veil{background:linear-gradient(260deg,rgba(11,6,24,.96) 20%,rgba(11,6,24,.72) 60%,rgba(11,6,24,.4) 100%)}
+  .fim .kicker{justify-content:flex-end!important}
+  .fim .passos{margin:28px 0 40px;max-width:620px;width:auto}
+  .fim .passos li{font-size:17.5px;justify-content:flex-end;padding:11px 0}
+
+  .rod{display:flex;position:absolute;left:88px;right:88px;bottom:34px;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(168,158,151,.62);pointer-events:none}
+  .rod .bloco{color:var(--gold);opacity:.75}
+
+  .hud{opacity:0;bottom:18px;gap:8px;transition:opacity .25s}
+  .hud::before{display:none}
+  .stage:hover .hud{opacity:1}
+  .hud button{width:38px;height:38px;font-size:15px}
+  .zonas{display:block;position:absolute;inset:0;z-index:6}
+  .zonas i{position:absolute;top:0;bottom:0;width:16%;cursor:pointer}
+  .zonas i.l{left:0}
+  .zonas i.r{right:0;width:34%}
+
+  .menu,.obj{padding:60px 80px}
+  .menu .grade{grid-template-columns:repeat(4,1fr);gap:10px}
+  .menu h3{font-size:15px;margin-bottom:28px}
+  .obj .cab{flex-direction:row;justify-content:space-between;align-items:baseline;margin-bottom:26px}
+  .obj .cab h3{font-size:36px;font-weight:300}
+  .obj .c{padding:20px 24px;border-radius:3px}
+  .obj .c .q{font-size:23px}
+  .obj .c .a{font-size:15.5px}
+}
+
+/* ---------- impressao ---------- */
+@page{size:1280px 720px;margin:0}
+@media print{
+  html,body{overflow:visible;background:#fff;height:auto}
+  .stage{position:static;display:block;background:none}
+  .deck{transform:none!important;width:auto;height:auto}
+  .slide{position:relative;display:block!important;width:1280px;height:720px;page-break-after:always;break-after:page;animation:none;border-radius:0}
+  .slide *{animation:none!important;transition:none!important}
+  .slide:last-child{page-break-after:auto}
+  .hud,.menu,.obj,.zonas{display:none!important}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="deck" id="deck"></div>
+  <div class="hud">
+    <button id="bPrev" title="Anterior (seta esquerda)">&#8249;</button>
+    <button class="conta" id="bConta">1 / 1</button>
+    <button id="bNext" title="Proximo (seta direita)">&#8250;</button>
+    <button id="bMenu" title="Indice (G)">&#9776;</button>
+    <button id="bObj" title="Objecoes (O)">&#9733;</button>
+    <button id="bFull" title="Tela cheia (F)">&#9974;</button>
+  </div>
+</div>
+
+<div class="menu" id="menu"><h3>Indice: clique para ir ao slide</h3><div class="grade" id="menuGrade"></div></div>
+<div class="obj" id="obj"></div>
+
+<script>
+/* =========================================================================
+   TABELA DE PRECOS: EDITE SOMENTE AQUI.
+   Troque o "___" pelo valor. Ex: site: "R$ 550"
+   Enquanto tiver "___", o campo aparece destacado em laranja no slide.
+   ========================================================================= */
+/* Painel de objecoes: so existe no arquivo apresentar.html, na URL com
+   ?apresentador=1, ou quando o deck roda direto do computador (file://). */
+const APRESENTADOR = location.protocol === 'file:'
+  || /apresentar/.test(location.pathname)
+  || new URLSearchParams(location.search).has('apresentador');
+
+const PRECOS = {
+  lpTabela:            "R$ 850",
+  lp:                  "R$ 725",
+  lp6:                 "R$ 690",
+  siteTabela:          "R$ 1.500",
+  site:                "R$ 1.275",
+  site6:               "R$ 1.215",
+  descontoSite:        "15",
+  descontoMensal:      "10",
+  desconto6:           "5",
+  contratoPadrao:      "3",
+  contrato6:           "6",
+  sitePaginasInclusas: "5",
+
+  lpManutTabela:     "R$ 389",
+  lpManut:           "R$ 350",
+  lpManut6:          "R$ 335",
+  siteManutTabela:   "R$ 583",
+  siteManut:         "R$ 525",
+  siteManut6:        "R$ 500",
+
+  crmStart:          "R$ 99",
+  crmStart6:         "R$ 95",
+  crmGrowth:         "R$ 248",
+  crmGrowth6:        "R$ 240",
+  crmPro:            "R$ 387",
+  crmPro6:           "R$ 370",
+  crmBusiness:       "R$ 676",
+  crmBusiness6:      "R$ 645",
+  crmEnterprise:     "R$ 945",
+  crmEnterprise6:    "R$ 900",
+
+  conteudoTabela:    "R$ 1.588",
+  conteudo:          "R$ 1.350",
+  conteudo6:         "R$ 1.285",
+  trafegoGoogle:     "R$ 550",
+  trafegoGoogle6:    "R$ 525",
+
+  comboEntrada:      "R$ 2.000",
+  comboEntrada6:     "R$ 1.905",
+  comboEntradaPro:   "R$ 2.725",
+  comboEntradaPro6:  "R$ 2.595",
+  comboMensal:       "R$ 3.023",
+  comboMensal6:      "R$ 2.885",
+  comboMensalPro:    "R$ 3.162",
+  comboMensalPro6:   "R$ 3.015",
+
+  primeiraEntrega:   "15",
+  validade:          "15"
+};
+
+const AGENCIA = "ARA Systems";
+const CLIENTE = "FZ Creative Solutions";
+
+/* ========================================================================= */
+
+const IMG = n => 'imagens/' + n;
+
+function p(chave){
+  const v = PRECOS[chave] === undefined ? '' : String(PRECOS[chave]);
+  const vazio = v === '' || v.indexOf('___') > -1 || v === '__';
+  return '<span class="' + (vazio ? 'vazio' : '') + '">' + (v || 'R$ ___') + '</span>';
+}
+function tx(s){
+  return String(s).replace(/\{\{(\w+)\}\}/g, (_, k) => p(k));
+}
+
+const ICOS = {
+  layout:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>',
+  building:'<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M6 12h12"/><path d="M10 22v-6h4v6"/><path d="M9 6h.01"/><path d="M15 6h.01"/><path d="M9 10h.01"/><path d="M15 10h.01"/>',
+  bot:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M12 5v2"/><circle cx="12" cy="4" r="1"/><path d="M9 16h.01"/><path d="M15 16h.01"/><path d="M8 11V9a4 4 0 0 1 8 0v2"/>',
+  megaphone:'<path d="m3 11 19-7v14L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+  camera:'<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/>',
+  search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>',
+  users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  wallet:'<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+  printer:'<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="8" rx="1"/>',
+  rocket:'<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>',
+  target:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+  pin:'<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+  spark:'<path d="M12 3v3"/><path d="m6.8 6.8 2.1 2.1"/><path d="M3 12h3"/><path d="m6.8 17.2 2.1-2.1"/><path d="M12 18v3"/><path d="m17.2 17.2-2.1-2.1"/><path d="M21 12h-3"/><path d="m17.2 6.8-2.1 2.1"/>',
+  calendar:'<path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/>',
+  chat:'<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+  chart:'<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>',
+  layers:'<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.11-8.58 3.91a2 2 0 0 1-1.66 0L3.18 12.11"/><path d="m22 17.11-8.58 3.91a2 2 0 0 1-1.66 0L3.18 17.11"/>',
+  clipboard:'<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>',
+  play:'<polygon points="6 3 20 12 6 21 6 3"/>',
+  inbox:'<path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>',
+  zap:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+  globe:'<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+  alert:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>',
+  check:'<path d="M20 6 9 17l-5-5"/>',
+  x:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  star:'<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+  shield:'<path d="M20 13c0 5-3.5 7.5-8 9.5-4.5-2-8-4.5-8-9.5V6l8-3 8 3Z"/>',
+  clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+  phone:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/>',
+  table:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M12 3v18"/>',
+  bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+  bag:'<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
+  file:'<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h8"/><path d="M8 17h6"/>',
+  mic:'<rect x="9" y="2" width="6" height="11" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/>',
+  funnel:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
+  kanban:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v10"/><path d="M12 7v6"/><path d="M16 7v3"/>',
+  orbit:'<circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="10"/><path d="M5 7c2 3 12 3 14 0"/>',
+  sprout:'<path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-2.3-3.4 0-2.8 3-4.4 5.3-2.4"/>',
+  key:'<circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/>',
+  handshake:'<path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.26l2.41 1.8a1 1 0 0 1 .2 1.4L18 12"/><path d="m2 15 6.5-6.5"/><path d="m7 21 4-4"/>'
+};
+
+function ico(name, extra){
+  const inner = ICOS[name] || ICOS.spark;
+  return '<span class="ico' + (extra ? ' ' + extra : '') + '" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">' + inner + '</svg></span>';
+}
+
+const SLIDES = [
+
+/* ============================== ABERTURA ============================== */
+{tipo:'capa', img:'01-capa.png', marca:AGENCIA,
+ titulo:'O sistema comercial da ' + CLIENTE,
+ sub:'Landing page · Site · CRM · Criação de Conteúdo · Gestão de Redes · Google Ads',
+ pills:[['layout','Landing page'],['building','Site'],['bot','CRM'],['layers','Conteúdo'],['megaphone','Redes'],['search','Google Ads']],
+ meta:[['Proposta','Combo 360'],['Data','Setembro de 2026'],['Validade','{{validade}} dias']]},
+
+{tipo:'declaracao', bloco:'Abertura', img:'02-diagnostico.png',
+ frase:['Poucos clientes.','Muita vontade de <em class="g">vender mais</em>.'],
+ lista:[
+  ['Empresa em início. A base ainda é pequena','sprout'],
+  ['O foco agora é atrair cliente, não administrar o que já existe','target'],
+  ['Estruturar o negócio para ter liberdade geográfica','pin']],
+ nota:'Qualidade de impressão não basta se ninguém te encontra. O que falta é <strong>sistema para vender</strong>.'},
+
+{tipo:'ciclo', bloco:'Abertura', kicker:'O objetivo agora', ico:'rocket',
+ titulo:'Vender para expandir',
+ passos:[
+  ['Atrair','mais clientes, todo mês','users'],
+  ['Faturar','orçamento que vira pedido','wallet'],
+  ['Comprar','maquinário com caixa','printer'],
+  ['Expandir','a gráfica cresce','rocket']],
+ nota:'Cada peça desta proposta existe para acelerar <strong>este ciclo</strong>.'},
+
+{tipo:'lista', bloco:'Abertura', kicker:'Quem somos', ico:'orbit',
+ titulo:'Não somos um freelancer de post',
+ sub:'Somos o departamento de tecnologia e marketing da ' + CLIENTE + '. Um parceiro só, operação 360.',
+ itens:[
+  ['Site e landing page','vitrine e página de campanha, prontas para o Google','layout'],
+  ['KoruVision CRM','IA no WhatsApp + funil. Produto nosso, não revenda','bot'],
+  ['Criação de Conteúdo e Gestão de Redes','estratégia, captação e publicação no mesmo ritmo','layers'],
+  ['Google Ads','quem busca gráfica agora chega em você','search']]},
+
+{tipo:'duo', bloco:'Abertura', kicker:'Diagnóstico', ico:'funnel',
+ titulo:'Onde a ' + CLIENTE + ' está hoje',
+ colA:{tom:'pos', titulo:'O que já existe', ico:'check', itens:[
+  ['Ofício de gráfica. O produto é concreto','printer'],
+  ['Vontade clara de crescer e estruturar','spark'],
+  ['Google é o canal certo para este setor','search']]},
+ colB:{tom:'neg', titulo:'O que trava a venda', ico:'alert', itens:[
+  ['Poucos clientes e pouca previsibilidade','users'],
+  ['Sem vitrine própria para o Google','globe'],
+  ['Lead no WhatsApp some se ninguém responde','chat']]},
+ nota:'Não vamos inventar a gráfica. Vamos <strong>fazer ela ser encontrada, atendida e lembrada</strong>.'},
+
+/* ================================ SITE ================================ */
+{tipo:'secao', img:'03-site.png', num:'01', ico:'layout', titulo:'Site + Landing page',
+ sub:'Quem pesquisa, precisa de um destino. Quem avalia, precisa de uma marca.'},
+
+{tipo:'duo', bloco:'Site', kicker:'Dois papéis, um sistema', ico:'layers',
+ titulo:'Landing page e site institucional',
+ colA:{tom:'pos', titulo:'Landing page', ico:'zap', itens:[
+  ['Página única, feita para converter o Google Ads','target'],
+  ['Uma oferta, um recado, um botão','file'],
+  ['Lead cai no WhatsApp e no CRM','inbox']]},
+ colB:{tom:'pos', titulo:'Site institucional', ico:'building', itens:[
+  ['Até 5 páginas de apresentação da marca','layers'],
+  ['Portfólio, serviços, quem somos, contato','camera'],
+  ['A gráfica deixa de parecer informal','star']]}},
+
+{tipo:'preco', bloco:'Site', kicker:'Condições comerciais', ico:'wallet', titulo:'Investimento: Site',
+ linhas:[
+  {nome:'Landing page', ico:'zap', desc:'De {{lpTabela}} por {{lp}}. Destino da campanha de Google Ads, com WhatsApp e rastreamento.', valor:'{{lp}}', cond:'{{descontoSite}}% de desconto', ok:true, hi:true},
+  {nome:'Site institucional', ico:'building', desc:'De {{siteTabela}} por {{site}}. Até {{sitePaginasInclusas}} páginas, com apresentação, serviços, portfólio e contato.', valor:'{{site}}', cond:'{{descontoSite}}% de desconto', ok:true, hi:true},
+  {nome:'Manutenção da LP', ico:'shield', desc:'De {{lpManutTabela}} por {{lpManut}}. Hospedagem, segurança e ajustes da campanha.', valor:'{{lpManut}}', cond:'{{descontoMensal}}% de desconto', ok:true},
+  {nome:'Manutenção institucional', ico:'globe', desc:'De {{siteManutTabela}} por {{siteManut}}. Site vivo: conteúdo, segurança e pequenas evoluções.', valor:'{{siteManut}}', cond:'{{descontoMensal}}% de desconto', ok:true}],
+ obs:[
+  '{{descontoSite}}% já aplicado na LP e no site. 50% na assinatura e 50% na entrega.',
+  '{{descontoMensal}}% já aplicado na manutenção. Contrato padrão de {{contratoPadrao}} meses.',
+  '6 meses: mais {{desconto6}}% em tudo.',
+  'LP {{lp6}} · site {{site6}}',
+  'Manutenção LP {{lpManut6}}/mês · institucional {{siteManut6}}/mês'
+ ]},
+
+/* ================================= CRM ================================= */
+{tipo:'secao', img:'04-crm.png', num:'02', ico:'bot', titulo:'KoruVision CRM',
+ sub:'Conversas viram oportunidades.'},
+
+{tipo:'declaracao', bloco:'CRM', ico:'spark',
+ frase:['Não vendemos chatbot.','Vendemos conversa que vira <em class="g">receita</em>.'],
+ nota:'O lead entra pelo WhatsApp, Instagram, Messenger ou site. A IA atende, qualifica e agenda. Tudo cai no funil, na inbox e na agenda da equipe.',
+ fecho:'A IA atende. O CRM fecha. A equipe só entra quando precisa.'},
+
+{tipo:'lista', bloco:'CRM', kicker:'Quatro pilares', ico:'kanban',
+ titulo:'O que o KoruVision entrega',
+ itens:[
+  ['IA que vende e agenda','resposta em segundos no WhatsApp, com FAQ e calendário','spark'],
+  ['CRM completo','inbox, leads, funil Kanban, agenda e equipe','kanban'],
+  ['Crescimento','campanhas, prospecção e métricas 7 / 30 / 90 dias','chart'],
+  ['Omnichannel','WhatsApp oficial, Instagram, Messenger e webchat','layers']]},
+
+{tipo:'comparativo', bloco:'CRM', kicker:'Antes e depois', ico:'funnel',
+ titulo:'Hoje × Com o KoruVision',
+ cabA:'Sem sistema', cabB:'Com KoruVision',
+ linhas:[
+  ['Lead espera horas no WhatsApp','Resposta em segundos, com handoff','clock'],
+  ['Conversa perdida no celular','Inbox da empresa, com histórico','phone'],
+  ['Planilha e WhatsApp Web','Funil visual com valor e etapa','table'],
+  ['Follow-up esquecido','Automação 24h / 72h','bell'],
+  ['Robô frio ou silêncio','IA com personalidade, que parece humana','bot']]},
+
+{tipo:'pacotes', bloco:'CRM', kicker:'Planos', ico:'star', titulo:'KoruVision: catálogo',
+ sub:'{{descontoMensal}}% já aplicado. Trial de 7 dias, sem cartão. Sem taxa de implantação. Growth é o indicado para a FZ agora.',
+ cards:[
+  {fx:'', nome:'Start', linha:'MEI / teste · −{{descontoMensal}}%', ico:'sprout',
+   itens:['1 usuário · 1 WhatsApp','1 agente de IA','Funil, inbox e agenda'],
+   l1:'3 meses', entrada:'{{crmStart}}', mensal6:'{{crmStart6}}'},
+  {fx:'Indicado agora', nome:'Growth', linha:'Time 2–3 · −{{descontoMensal}}%', dest:true, ico:'spark',
+   itens:['3 usuários · 2 canais','Editor de automação','IA + 2º canal de verdade'],
+   l1:'3 meses', entrada:'{{crmGrowth}}', mensal6:'{{crmGrowth6}}'},
+  {fx:'Âncora do produto', nome:'Pro', linha:'Operação diária · −{{descontoMensal}}%', ico:'star',
+   itens:['Omnichannel e multiagente','Campanhas e prospecção','API de leitura'],
+   l1:'3 meses', entrada:'{{crmPro}}', mensal6:'{{crmPro6}}'},
+  {fx:'', nome:'Business', linha:'Escala · −{{descontoMensal}}%', ico:'shield',
+   itens:['API de escrita','Auditoria','Volume comercial'],
+   l1:'3 meses', entrada:'{{crmBusiness}}', mensal6:'{{crmBusiness6}}'}],
+ nota:'Enterprise {{crmEnterprise}}/mês (3 meses) ou {{crmEnterprise6}}/mês (6 meses, +{{desconto6}}%). Inbox, funil, agenda e FAQ em <strong>todos</strong> os planos. Campanhas só no Pro para cima. Carteira Meta à parte. Contrato padrão: <strong>{{contratoPadrao}} meses</strong>.'},
+
+/* ============================ CONTEUDO ============================ */
+{tipo:'secao', img:'05-social.png', num:'03', ico:'layers', titulo:'Criação de Conteúdo',
+ sub:'Mais Gestão de Redes. Juntos, o resultado aparece.'},
+
+{tipo:'lista', bloco:'Conteúdo', kicker:'Estratégia de Conteúdos', ico:'orbit',
+ titulo:'Criação de Conteúdo e Gestão de Redes',
+ itens:[
+  ['Estratégia de conteúdos','o conceito do mês nasce antes de filmar e de postar','clipboard'],
+  ['Calendário 1 mês à frente','você aprova a grade. A criação já sabe o que produzir','calendar'],
+  ['Criação de conteúdo','foto e vídeo da gráfica, com direção no dia','camera'],
+  ['Gestão de redes sociais','feed, Reels e CTA de orçamento no Instagram e no Facebook','megaphone'],
+  ['O mesmo material em quatro canais','rede, site, Ads e WhatsApp, com a cara do ofício','play'],
+  ['Cessão total de uso','o arquivo é da gráfica. Para sempre.','key']],
+ nota:'Criação e gestão no mesmo contrato. <strong>Juntos, o resultado é o pedido.</strong>'},
+
+{tipo:'duo', bloco:'Conteúdo', kicker:'O conjunto', ico:'layers',
+ titulo:'Juntos, o resultado é garantido',
+ colA:{tom:'pos', titulo:'Criação de Conteúdo', ico:'camera', itens:[
+  ['Sessão com direção e marcações do briefing','clipboard'],
+  ['Foto e vídeo da operação, não banco de imagem','camera'],
+  ['Acervo para site, Ads e WhatsApp','layers']]},
+ colB:{tom:'pos', titulo:'Gestão de Redes Sociais', ico:'megaphone', itens:[
+  ['Calendário adiantado, copy e publicação','calendar'],
+  ['Instagram e Facebook com ritmo de gráfica','globe'],
+  ['Chamada para orçamento, não para like','chat']]},
+ nota:'Um briefing, um ritmo, um responsável. <strong>Estratégia de conteúdos que vira presença e pedido.</strong>'},
+
+{tipo:'preco', bloco:'Conteúdo', kicker:'Condições comerciais', ico:'wallet', titulo:'Investimento: Criação e Gestão',
+ linhas:[
+  {nome:'Criação + Gestão de Redes · 3 meses', ico:'layers', desc:'De {{conteudoTabela}} por {{conteudo}}. Estratégia, criação de conteúdo e gestão de redes no mesmo contrato. {{descontoSite}}% já aplicado.', valor:'{{conteudo}}', cond:'{{descontoSite}}% de desconto', ok:true, hi:true},
+  {nome:'Contrato de 6 meses', ico:'star', desc:'O mesmo conjunto, com mais {{desconto6}}% em cima do valor já com desconto.', valor:'{{conteudo6}}', cond:'+{{desconto6}}% · 6 meses', ok:true},
+  {nome:'Criação de conteúdo inclusa', ico:'camera', desc:'Sessão mensal, edição e entrega para site, Ads, redes e WhatsApp.', valor:'incluso', incluso:true},
+  {nome:'Gestão de redes inclusa', ico:'megaphone', desc:'Instagram, Facebook, calendário adiantado e CTA de orçamento.', valor:'incluso', incluso:true}],
+ obs:[
+  'Contrato padrão de {{contratoPadrao}} meses.',
+  '{{descontoSite}}% já aplicado no conjunto (de {{conteudoTabela}} por {{conteudo}}).',
+  '6 meses: mais {{desconto6}}% em tudo ({{conteudo6}}/mês).',
+  'Criação de Conteúdo e Gestão de Redes. <strong>Juntos, o resultado aparece.</strong>'
+ ]},
+
+/* ============================= GOOGLE ADS ============================= */
+{tipo:'secao', img:'07-trafego.png', num:'04', ico:'search', titulo:'Google Ads',
+ sub:'O canal certo para gráfica: quem busca, quer comprar agora.'},
+
+{tipo:'lista', bloco:'Tráfego', kicker:'Por que Google', ico:'target',
+ titulo:'Intenção de compra, não distração',
+ itens:[
+  ['Quem pesquisa, compra','cartão, banner, adesivo, impressão. Agora.','bag'],
+  ['Palavras da gráfica','as buscas certas, na cidade certa','search'],
+  ['Destino na landing page','o clique cai numa oferta, não num perfil','layout'],
+  ['Lead no CRM','WhatsApp com origem identificada','inbox'],
+  ['Remarketing','quem visitou e não pediu orçamento volta a ver você','bell'],
+  ['Relatório mensal','investimento, clique, lead e orçamento gerado','chart']],
+ nota:'Sem LP e sem CRM, anúncio vira despesa. Com os dois, vira <strong>multiplicador</strong>.'},
+
+{tipo:'lista', bloco:'Tráfego', kicker:'Como a campanha trabalha', ico:'zap',
+ titulo:'Setup incluso. Verba no Google. Gestão na ARA.',
+ itens:[
+  ['Conta e conversão','pixel, evento e WhatsApp rastreados no primeiro mês','globe'],
+  ['Segmentação local','quem está perto e quem precisa agora','pin'],
+  ['Criativo da captação','anúncio com a cara da gráfica, não template','camera'],
+  ['Palavras negativas','não queima verba em busca que não compra','shield'],
+  ['Otimização semanal','pausa o que não converte, reforça o que fecha','chart'],
+  ['Verba à parte','você paga o Google direto. Transparência total','wallet']],
+ nota:'A gestão é nossa. A verba é sua, na conta do Google. <strong>Sem taxa de setup.</strong>'},
+
+{tipo:'preco', bloco:'Tráfego', kicker:'Condições comerciais', ico:'wallet', titulo:'Investimento: Google Ads',
+ linhas:[
+  {nome:'Gestão · 3 meses', ico:'search', desc:'Busca para gráfica: impressão, banner, cartão e adesivo. Destino na LP, lead no CRM. {{descontoMensal}}% já aplicado.', valor:'{{trafegoGoogle}}', cond:'{{descontoMensal}}% de desconto', ok:true, hi:true},
+  {nome:'Contrato de 6 meses', ico:'star', desc:'O mesmo pacote, com mais {{desconto6}}% em cima do valor já com desconto.', valor:'{{trafegoGoogle6}}', cond:'+{{desconto6}}% · 6 meses', ok:true},
+  {nome:'Setup, remarketing e negativas', ico:'shield', desc:'Conta, pixel e WhatsApp rastreados. Quem não pediu orçamento volta. Busca que não compra não queima verba.', valor:'incluso', incluso:true},
+  {nome:'Otimização semanal', ico:'chart', desc:'Pausa o que não converte, reforça o que fecha. Relatório de clique, lead e orçamento.', valor:'incluso', incluso:true}],
+ obs:[
+  'Contrato padrão de {{contratoPadrao}} meses.',
+  '6 meses: mais {{desconto6}}% em tudo ({{trafegoGoogle6}}/mês).',
+  'Sem taxa de setup. A <strong>verba de anúncio</strong> é paga direto ao Google.'
+ ]},
+
+/* ============================= COMBO ============================= */
+{tipo:'secao', img:'08-ecossistema.png', num:'05', ico:'orbit', titulo:'Combo 360',
+ sub:'Cada peça sozinha ajuda. Juntas, elas vendem.'},
+
+{tipo:'ciclo', bloco:'Combo', kicker:'O ciclo', ico:'orbit',
+ titulo:'Um parceiro. Uma operação.',
+ passos:[
+  ['Ads','traz quem busca','search'],
+  ['LP','converte o clique','zap'],
+  ['CRM','atende e fecha','bot'],
+  ['Criação + Redes','prova e mantém a marca','layers']],
+ nota:'Quatro fornecedores não fazem isso no mesmo ritmo. <strong>Um só, sim.</strong>'},
+
+{tipo:'pacotes', bloco:'Combo', kicker:'Investimento', ico:'handshake', titulo:'O que fechamos',
+ sub:'3 meses: 15% no site, na criação de conteúdo e na gestão de redes. 10% no restante. 6 meses: mais 5% em tudo.',
+ cards:[
+  {fx:'Indicado agora', nome:'360 Growth', linha:'Começar a vender', dest:true, ico:'spark',
+   itens:['LP + site institucional (−{{descontoSite}}%)','Manutenção LP + site (−{{descontoMensal}}%)','Criação de Conteúdo + Gestão de Redes (−{{descontoSite}}%)','Google Ads (−{{descontoMensal}}%)','KoruVision Growth (−{{descontoMensal}}%)'],
+   l1:'Entrada', entrada:'{{comboEntrada}}', l2:'3 meses', mensal:'{{comboMensal}}', mensal6:'{{comboMensal6}}'},
+  {fx:'Quando a operação pedir', nome:'360 Pro', linha:'Escalar', ico:'rocket',
+   itens:['LP + site + 2ª landing (−{{descontoSite}}%)','Manutenção LP + site (−{{descontoMensal}}%)','Criação de Conteúdo + Gestão de Redes (−{{descontoSite}}%)','Google Ads + KoruVision Pro (−{{descontoMensal}}%)','Campanhas, omnichannel e multiagente'],
+   l1:'Entrada', entrada:'{{comboEntradaPro}}', l2:'3 meses', mensal:'{{comboMensalPro}}', mensal6:'{{comboMensalPro6}}'}],
+ nota:'Contrato padrão: <strong>{{contratoPadrao}} meses</strong>. No de {{contrato6}} meses, mais {{desconto6}}% em tudo. Entrada Growth {{comboEntrada6}} e Pro {{comboEntradaPro6}}. Sem taxa de implantação do CRM. Verba de Google Ads à parte. Válida por <strong>{{validade}} dias</strong>.'},
+
+{tipo:'contato', img:'09-fechamento.png', bloco:'Combo', ico:'key',
+ kicker:'Próximos passos', titulo:'Como começamos',
+ passos:[
+  ['Você confirma o combo 360','handshake'],
+  ['Assinamos e liberamos o link da entrada','file'],
+  ['Briefing: oferta, acessos e marcações de captação','mic'],
+  ['LP no ar, CRM conectado, campanha de Ads','zap'],
+  ['Em {{primeiraEntrega}} dias a operação começa a girar','rocket']],
+ validade:'Proposta válida por {{validade}} dias'}
+];
+
+const OBJECOES = [
+ ['“Já tenho Instagram.”','Gestão de redes com criação de conteúdo no mesmo ritmo: a estratégia manda o que produzir, o material vira post, anúncio e prova no WhatsApp. Juntos, o resultado é o pedido.'],
+ ['“Já tenho chatbot.”','Chatbot não tem funil, agenda, equipe nem métrica de conversão. No KoruVision a conversa vira card no pipeline, e a equipe só entra quando precisa.'],
+ ['“IA inventa resposta.”','FAQ tem prioridade máxima. A base de conhecimento (PDF, texto, URL) amarra o conteúdo. Nos planos maiores dá para auditar o rastro da resposta.'],
+ ['“WhatsApp oficial é caro.”','A mensalidade não inclui o custo da Meta. Mostramos a carteira separado para não ter surpresa. Start e Growth começam enxutos.'],
+ ['“Está caro para quem está começando.”','O combo existe para vender mais, não para enfeitar. Os valores de 3 meses já saem com 10% no mensal. Em 6 meses entra mais 5% em tudo. Growth a {{crmGrowth}}/mês é o degrau certo agora; Pro entra depois.'],
+ ['“Vou pensar.”','Claro. O recado é a ordem: LP + Google Ads + CRM. Sem destino e sem atendimento, anúncio queima verba. O resto do 360 segura a marca no mês seguinte.']
+];
+
+/* ============================ RENDERIZACAO ============================ */
+
+function rodape(s, i, total){
+  return '<div class="rod"><span class="bloco">' + (s.bloco || AGENCIA) + '</span>' +
+         '<span>' + AGENCIA + ' &nbsp;·&nbsp; ' + CLIENTE + '</span>' +
+         '<span>' + String(i + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0') + '</span></div>';
+}
+function cabeca(s){
+  let h = '';
+  if (s.kicker) h += '<div class="kicker">' + (s.ico ? ico(s.ico, 'sm') : '') + s.kicker + '</div>';
+  if (s.titulo) h += '<h2>' + tx(s.titulo) + '</h2>';
+  if (s.sub) h += '<p class="sub">' + tx(s.sub) + '</p>';
+  else if (s.titulo) h += '<div class="rule"></div>';
+  return h;
+}
+function pad(inner, cls){
+  return '<div class="pad' + (cls ? ' ' + cls : '') + '"><div class="fit">' + inner + '</div></div>';
+}
+function listaItens(itens){
+  const n = itens.length;
+  return '<div class="mosaico n' + n + '">' + itens.map(it => {
+    const t = Array.isArray(it) ? it[0] : it;
+    const d = Array.isArray(it) ? it[1] : '';
+    const ic = Array.isArray(it) ? it[2] : '';
+    return '<article class="tile">' + (ic ? ico(ic) : '') +
+      '<h4>' + tx(t) + '</h4>' +
+      (d ? '<p>' + tx(d) + '</p>' : '') +
+      '</article>';
+  }).join('') + '</div>';
+}
+function itemIco(x, tom){
+  if (Array.isArray(x)) return ico(x[1], tom === 'neg' ? 'sm neg' : 'sm') + '<span>' + tx(x[0]) + '</span>';
+  return tx(x);
+}
+
+function render(s, i, total){
+  const fundo = '<div class="glow tl"></div><div class="glow br"></div><div class="grain"></div>';
+  let corpo = '';
+
+  switch (s.tipo) {
+
+  case 'capa':
+    corpo = '<div class="capa">' +
+      '<div class="bg" style="background-image:url(' + IMG(s.img) + ')"></div><div class="veil"></div>' + fundo +
+      '<div class="in"><div class="marca">' + s.marca + '</div>' +
+      '<h1>' + tx(s.titulo) + '</h1>' +
+      (s.pills ? '<div class="pills">' + s.pills.map(p => '<span class="pill">' + ico(p[0], 'sm') + p[1] + '</span>').join('') + '</div>'
+        : '<p class="sub" style="font-size:21px;color:var(--nude);opacity:.8;margin:0">' + tx(s.sub) + '</p>') +
+      '<div class="meta">' + s.meta.map(m => '<div><b>' + m[0] + '</b>' + tx(m[1]) + '</div>').join('') + '</div></div></div>';
+    break;
+
+  case 'secao':
+    corpo = '<div class="secao">' +
+      '<div class="bg" style="background-image:url(' + IMG(s.img) + ')"></div><div class="veil"></div>' + fundo +
+      '<div class="in"><div class="secao-top">' + (s.ico ? ico(s.ico, 'lg') : '') + '<div class="num">' + s.num + '</div></div><h1>' + tx(s.titulo) + '</h1>' +
+      '<p class="sub">' + tx(s.sub) + '</p></div></div>' + rodape(s, i, total);
+    break;
+
+  case 'declaracao': {
+    let h = '';
+    if (s.kicker) h += '<div class="kicker">' + (s.ico ? ico(s.ico, 'sm') : '') + s.kicker + '</div>';
+    else if (s.ico) h += '<div style="margin-bottom:22px">' + ico(s.ico, 'lg') + '</div>';
+    h += '<div class="frase">' + s.frase.map(f => '<p>' + tx(f) + '</p>').join('') + '</div>';
+    if (s.lista) h += '<ul>' + s.lista.map(l => {
+      const t = Array.isArray(l) ? l[0] : l;
+      const ic = Array.isArray(l) ? l[1] : '';
+      return '<li>' + (ic ? ico(ic, 'sm') : '') + '<span>' + tx(t) + '</span></li>';
+    }).join('') + '</ul>';
+    if (s.nota) h += '<div class="nota">' + tx(s.nota) + '</div>';
+    if (s.fecho) h += '<div style="margin-top:26px;font-family:var(--serif);font-size:24px;font-weight:600;color:var(--gold-soft);line-height:1.3">' + tx(s.fecho) + '</div>';
+    const foto = s.img
+      ? '<div class="bgfoto" style="background-image:url(' + IMG(s.img) + ')"></div><div class="bgveil"></div>'
+      : '';
+    corpo = foto + fundo + pad(h, 'decl' + (s.img ? ' comfoto' : '')) + rodape(s, i, total);
+    break;
+  }
+
+  case 'lista': {
+    let h = cabeca(s) + listaItens(s.itens);
+    if (s.nota) h += '<div style="margin-top:20px;padding-left:22px;border-left:2px solid var(--gold);font-size:17px;line-height:1.55;color:var(--nude);font-weight:300">' + tx(s.nota) + '</div>';
+    corpo = fundo + pad(h) + rodape(s, i, total);
+    break;
+  }
+
+  case 'duo': {
+    const col = c => '<div class="painel ' + c.tom + '"><h4>' + (c.ico ? ico(c.ico, c.tom === 'neg' ? 'sm neg' : 'sm') : '') + tx(c.titulo) + '</h4><ul>' +
+      c.itens.map(x => '<li>' + itemIco(x, c.tom) + '</li>').join('') + '</ul></div>';
+    let h = cabeca(s) + '<div class="duo">' + col(s.colA) + col(s.colB) + '</div>';
+    if (s.nota) h += '<div style="margin-top:22px;padding-left:22px;border-left:2px solid var(--gold);font-size:18px;color:var(--nude);font-weight:300">' + tx(s.nota) + '</div>';
+    corpo = fundo + pad(h) + rodape(s, i, total);
+    break;
+  }
+
+  case 'cenario': {
+    const box = (b, hi) => '<div class="box' + (hi ? ' hi' : '') + '"><div class="tag">' + b.tag + '</div>' +
+      '<div class="fala">' + tx(b.fala) + '</div><ul>' + b.itens.map(x => '<li>' + tx(x) + '</li>').join('') + '</ul>' +
+      '<div class="selo">' + tx(b.selo) + '</div></div>';
+    corpo = fundo + pad(cabeca(s) + '<div class="cen">' + box(s.antes, false) + box(s.depois, true) + '</div>') +
+      rodape(s, i, total);
+    break;
+  }
+
+  case 'comparativo': {
+    const linhas = s.linhas.map(l => '<tr><td><div class="row">' + ico(l[2] || 'x', 'sm neg') + '<span>' + tx(l[0]) + '</span></div></td><td class="b"><div class="row">' + ico(l[2] || 'check', 'sm ok') + '<span>' + tx(l[1]) + '</span></div></td></tr>').join('');
+    corpo = fundo + pad(cabeca(s) +
+      '<table class="tab"><thead><tr><th><div class="row">' + ico('x', 'sm neg') + s.cabA + '</div></th><th class="b"><div class="row">' + ico('check', 'sm ok') + s.cabB + '</div></th></tr></thead>' +
+      '<tbody>' + linhas + '</tbody></table>') + rodape(s, i, total);
+    break;
+  }
+
+  case 'ciclo': {
+    const et = s.passos.map((x, k) => '<div class="et"><div class="n">' + (x[2] ? ico(x[2]) : (k + 1)) + '</div>' +
+      '<div class="t">' + tx(x[0]) + '</div><div class="d">' + tx(x[1]) + '</div></div>').join('<div class="seta">&#8594;</div>');
+    let h = cabeca(s) + '<div class="ciclo">' + et + '</div>';
+    if (s.nota) h += '<div style="margin-top:10px;padding-left:22px;border-left:2px solid var(--gold);font-size:18px;color:var(--nude);font-weight:300">' + tx(s.nota) + '</div>';
+    corpo = fundo + pad(h) + rodape(s, i, total);
+    break;
+  }
+
+  case 'pacotes': {
+    const cards = s.cards.map(c => '<div class="pac' + (c.dest ? ' dest' : '') + '">' +
+      '<div class="fx">' + (c.fx || '') + '</div>' + (c.ico ? ico(c.ico) : '') + '<h4>' + tx(c.nome) + '</h4><div class="lin">' + tx(c.linha) + '</div>' +
+      '<ul>' + c.itens.map(x => '<li>' + tx(x) + '</li>').join('') + '</ul>' +
+      '<div class="val"><div class="g"><div class="l">' + (c.l1 || 'Entrada') + '</div><div class="v">' + tx(c.entrada) + '</div></div>' +
+      (c.mensal ? '<div class="g"><div class="l">' + (c.l2 || 'Mensal') + '</div><div class="v">' + tx(c.mensal) + '</div></div>' : '') +
+      (c.mensal6 ? '<div class="g ok"><div class="l">' + (c.l3 || '6 meses') + '</div><div class="v">' + tx(c.mensal6) + '</div></div>' : '') +
+      '</div></div>').join('');
+    let h = cabeca(s) + '<div class="pacs">' + cards + '</div>';
+    if (s.nota) h += '<div style="margin-top:18px;font-size:15.5px;line-height:1.5;color:var(--muted);font-weight:300">' + tx(s.nota) + '</div>';
+    corpo = fundo + pad(h) + rodape(s, i, total);
+    break;
+  }
+
+  case 'timeline': {
+    const f = s.fases.map(x => '<div class="f"><div class="b"></div><div class="m">' + x[0] + '</div>' +
+      '<div class="t">' + x[1] + '</div><div class="d">' + tx(x[2]) + '</div></div>').join('');
+    corpo = fundo + pad(cabeca(s) + '<div class="tl">' + f + '</div>') + rodape(s, i, total);
+    break;
+  }
+
+  case 'preco': {
+    const linhas = s.linhas.map(l => {
+      const inc = !!l.incluso;
+      return '<div class="l' + (l.hi ? ' hi' : '') + (inc ? ' inc' : '') + (l.ok && !inc ? ' ok' : '') + '">' +
+        (l.ico ? ico(l.ico) : '') +
+        '<div class="esq"><div class="nome">' + tx(l.nome) + '</div>' +
+        (l.desc ? '<div class="desc">' + tx(l.desc) + '</div>' : '') + '</div>' +
+        '<div class="dir"><div class="v">' + tx(l.valor) + '</div>' +
+        (l.cond ? '<div class="cond' + (l.ok || inc ? ' ok' : '') + '">' + tx(l.cond) + '</div>' : '') +
+        '</div></div>';
+    }).join('');
+    corpo = fundo + pad(cabeca(s) + '<div class="prec"><div class="linhas">' + linhas + '</div>' +
+      (s.obs ? '<div class="obs">' + (Array.isArray(s.obs)
+        ? '<ul>' + s.obs.map(x => '<li>' + tx(x) + '</li>').join('') + '</ul>'
+        : tx(s.obs)) + '</div>' : '') + '</div>') + rodape(s, i, total);
+    break;
+  }
+
+  case 'contato':
+    corpo = '<div class="fim"><div class="bg" style="background-image:url(' + IMG(s.img) + ')"></div><div class="veil"></div>' + fundo +
+      '<div class="in"><div class="kicker" style="justify-content:flex-end">' + (s.ico ? ico(s.ico, 'sm') : '') + s.kicker + '</div>' +
+      '<h2 style="font-size:52px">' + tx(s.titulo) + '</h2>' +
+      '<ol class="passos">' + s.passos.map((x, k) => {
+        const t = Array.isArray(x) ? x[0] : x;
+        const ic = Array.isArray(x) ? x[1] : '';
+        return '<li>' + (ic ? ico(ic, 'sm') : '<span class="n">' + (k + 1) + '</span>') + '<span>' + tx(t) + '</span></li>';
+      }).join('') + '</ol>' +
+      '<div style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">' + tx(s.validade) + '</div>' +
+      '</div></div>';
+    break;
+  }
+
+  return '<section class="slide" data-i="' + i + '">' + corpo + '<div class="barra" style="width:' +
+    ((i + 1) / total * 100) + '%"></div></section>';
+}
+
+/* ============================== MOTOR ============================== */
+const deck = document.getElementById('deck');
+const total = SLIDES.length;
+deck.innerHTML = SLIDES.map((s, i) => render(s, i, total)).join('');
+const slides = Array.from(deck.querySelectorAll('.slide'));
+let atual = 0;
+
+function ir(n){
+  atual = Math.max(0, Math.min(total - 1, n));
+  slides.forEach((el, i) => el.classList.toggle('on', i === atual));
+  document.getElementById('bConta').textContent = (atual + 1) + ' / ' + total;
+  location.hash = atual + 1;
+  slides[atual].querySelectorAll('.pad, .in').forEach(el => el.scrollTop = 0);
+  animar(slides[atual]);
+}
+function animar(el){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const sel = '.kicker,h1,h2,.sub,.marca,.pill,.tile,.painel,.pac,.prec .l,.ciclo .et,.decl .frase,.decl ul li,.decl .nota,.tab tbody tr,.meta > div,.passos li,.secao-top,.obs,.obs li,.ico.lg';
+  el.querySelectorAll(sel).forEach((n, i) => {
+    n.style.animation = 'none';
+    void n.offsetWidth;
+    n.style.animation = 'enterY .55s cubic-bezier(.22,.61,.36,1) ' + (i * 0.045) + 's both';
+  });
+}
+const prox = () => ir(atual + 1);
+const ant  = () => ir(atual - 1);
+
+/* No celular o deck ocupa a tela inteira e cada slide rola; o palco fixo de
+   1280x720 e a reducao automatica de texto valem so a partir de 861px. */
+const telaPequena = () => window.matchMedia('(max-width:860px)').matches;
+
+function escala(){
+  if (telaPequena()) { deck.style.transform = ''; return; }
+  const m = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+  deck.style.transform = 'scale(' + m + ')';
+}
+window.addEventListener('resize', () => { escala(); ajustar(); });
+window.addEventListener('orientationchange', () => setTimeout(() => { escala(); ajustar(); }, 250));
+
+/* impede que qualquer slide com muito texto transborde os 720px */
+function ajustar(){
+  slides.forEach(el => {
+    const fit = el.querySelector('.fit');
+    if (!fit) return;
+    if (telaPequena()) { fit.style.transform = ''; fit.style.width = ''; return; }
+    const oculto = !el.classList.contains('on');
+    if (oculto) { el.style.visibility = 'hidden'; el.style.display = 'block'; }
+    fit.style.transform = ''; fit.style.width = '';
+    for (let n = 0; n < 2; n++) {
+      const disp = fit.clientHeight, real = fit.scrollHeight;
+      if (real <= disp + 1) break;
+      const k = Math.max(.55, (disp / real) * 0.99);
+      fit.style.transform = 'scale(' + k + ')';
+      fit.style.width = (100 / k) + '%';
+    }
+    if (oculto) { el.style.visibility = ''; el.style.display = ''; }
+  });
+}
+
+document.addEventListener('keydown', e => {
+  const menuAberto = document.getElementById('menu').classList.contains('on');
+  const objAberto = document.getElementById('obj').classList.contains('on');
+  switch (e.key) {
+    case 'ArrowRight': case 'PageDown': case ' ': e.preventDefault(); prox(); break;
+    case 'ArrowLeft': case 'PageUp': ant(); break;
+    case 'Home': ir(0); break;
+    case 'End': ir(total - 1); break;
+    case 'f': case 'F': tela(); break;
+    case 'g': case 'G': painel('menu'); break;
+    case 'o': case 'O': if (APRESENTADOR) painel('obj'); break;
+    case 'Escape': if (menuAberto) painel('menu'); if (objAberto) painel('obj'); break;
+  }
+});
+
+function tela(){
+  if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+  else document.exitFullscreen();
+}
+function painel(id){
+  const outro = id === 'menu' ? 'obj' : 'menu';
+  document.getElementById(outro).classList.remove('on');
+  document.getElementById(id).classList.toggle('on');
+}
+
+document.getElementById('bNext').onclick = prox;
+document.getElementById('bPrev').onclick = ant;
+document.getElementById('bFull').onclick = tela;
+document.getElementById('bMenu').onclick = () => painel('menu');
+document.getElementById('bObj').onclick = () => painel('obj');
+if (!APRESENTADOR) document.getElementById('bObj').remove();
+
+/* zonas de clique */
+const zonas = document.createElement('div');
+zonas.className = 'zonas';
+zonas.innerHTML = '<i class="l"></i><i class="r"></i>';
+document.querySelector('.stage').appendChild(zonas);
+zonas.querySelector('.l').onclick = ant;
+zonas.querySelector('.r').onclick = prox;
+
+/* swipe: so troca de slide quando o gesto e claramente horizontal,
+   para nao atrapalhar a rolagem vertical do conteudo no celular */
+let x0 = null, y0 = null;
+addEventListener('touchstart', e => {
+  x0 = e.touches[0].clientX;
+  y0 = e.touches[0].clientY;
+}, {passive:true});
+addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0;
+  const dy = e.changedTouches[0].clientY - y0;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.6) (dx < 0 ? prox : ant)();
+  x0 = y0 = null;
+}, {passive:true});
+
+/* indice */
+document.getElementById('menuGrade').innerHTML = SLIDES.map((s, i) => {
+  const t = s.titulo || s.marca || (s.frase ? s.frase[0].replace(/<[^>]+>/g, '') : 'Slide');
+  return '<div class="it" data-go="' + i + '"><div class="n">' + String(i + 1).padStart(2, '0') +
+    ' · ' + (s.bloco || 'Capa') + '</div><div class="t">' + t + '</div></div>';
+}).join('');
+document.getElementById('menuGrade').onclick = e => {
+  const it = e.target.closest('.it');
+  if (!it) return;
+  ir(+it.dataset.go);
+  painel('menu');
+};
+document.getElementById('menu').onclick = e => { if (e.target.id === 'menu') painel('menu'); };
+
+/* objecoes */
+if (APRESENTADOR) {
+  document.getElementById('obj').innerHTML =
+    '<div class="cab"><h3>Respostas para as objeções</h3><span>Painel interno · tecla O para fechar</span></div>' +
+    '<div class="grade">' + OBJECOES.map(o =>
+      '<div class="c"><div class="q">' + o[0] + '</div><div class="a">' + o[1] + '</div></div>').join('') + '</div>';
+  document.getElementById('obj').onclick = e => { if (e.target.id === 'obj') painel('obj'); };
+}
+
+/* link direto para um slide e botao voltar do navegador */
+addEventListener('hashchange', () => {
+  const n = (parseInt(location.hash.slice(1), 10) || 1) - 1;
+  if (n !== atual) ir(n);
+});
+
+escala();
+ir(location.hash ? (parseInt(location.hash.slice(1), 10) || 1) - 1 : 0);
+ajustar();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajustar);
+window.addEventListener('load', ajustar);
+window.addEventListener('beforeprint', ajustar);
+</script>
+</body>
+</html>
